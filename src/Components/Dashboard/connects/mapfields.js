@@ -4,6 +4,12 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { AppStepAction }  from "@/pages/store/index";
 import { useState } from "react";
+import {
+  LeftOutlined,
+  RightOutlined,
+  PoweroffOutlined,
+} from "@ant-design/icons";
+
 
 const MapFieldsApp = (props) => {
     const dispatch = useDispatch();
@@ -43,10 +49,10 @@ const MapFieldsApp = (props) => {
             marginBottom: "18px"
           }}
         >
-          <Row>
+          <Row align={'middle'}>
             <Col
               md={{
-                span: 11,
+                span: 10,
                 offset: 0,
               }}
             >
@@ -66,15 +72,30 @@ const MapFieldsApp = (props) => {
             </Col>
             <Col
               md={{
-                span: 2,
+                span: 4,
                 offset: 0,
               }}
             >
-              
+              <Row align={'middle'} justify={'center'}>
+
+              <Button type="text" className="sn-ar-btn">
+             <LeftOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+
+             <Button type="text" className="sn-ar-btn sn-ar-btn--blue" style={{marginLeft: "8px", marginRight: "8px"}}>
+             <PoweroffOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+            
+
+             <Button type="text" className="sn-ar-btn">
+             <RightOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+              </Row>
+             
             </Col>
             <Col
               md={{
-                span: 11,
+                span: 10,
                 offset: 0,
               }}
             >
@@ -106,10 +127,10 @@ const MapFieldsApp = (props) => {
             ></Col>
           </Row>
 
-          <Row>
+          <Row align={'middle'}>
             <Col
               md={{
-                span: 11,
+                span: 10,
                 offset: 0,
               }}
             >
@@ -129,15 +150,30 @@ const MapFieldsApp = (props) => {
             </Col>
             <Col
               md={{
-                span: 2,
+                span: 4,
                 offset: 0,
               }}
             >
-              <button></button>
+              <Row align={'middle'} justify={'center'}>
+
+              <Button type="text" className="sn-ar-btn">
+             <LeftOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+
+             <Button type="text" className="sn-ar-btn sn-ar-btn--blue" style={{marginLeft: "8px", marginRight: "8px"}}>
+             <PoweroffOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+            
+
+             <Button type="text" className="sn-ar-btn">
+             <RightOutlined style={{fontSize: "20px", color: "#ffffff", fontWeight: "bold"}}/>
+             </Button>
+              </Row>
+             
             </Col>
             <Col
               md={{
-                span: 11,
+                span: 10,
                 offset: 0,
               }}
             >
@@ -163,7 +199,7 @@ const MapFieldsApp = (props) => {
             ></Col>
             <Col
               md={{
-                span: 12,
+                span: 10,
                 offset: 0,
               }}
             ></Col>
