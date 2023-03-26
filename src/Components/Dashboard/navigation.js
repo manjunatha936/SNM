@@ -28,13 +28,13 @@ const NaviGation = (props) => {
         >
           <Row justify="end">
             <ul className="sn-flex-list sn-header-links">
-              <li className="sn-header-links__item" style={{marginLeft: "30px"}}>
+              <li className="sn-header-links__item">
                 <Link href="/">Join us on slack</Link>
               </li>
-              <li className="sn-header-links__item" style={{marginLeft: "30px"}}>
+              <li className="sn-header-links__item">
                 <Link href="/about">View Whats new</Link>
               </li>
-              <li className="sn-header-links__item" style={{marginLeft: "30px"}}>
+              <li className="sn-header-links__item">
                 <Link href="/blog/hello-world">Need Help?</Link>
               </li>
             </ul>

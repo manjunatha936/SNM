@@ -1,5 +1,8 @@
 import { Roboto } from "@next/font/google";
 import "@/styles/style.scss";
+import store from "@/pages/store/index";
+import { Provider } from "react-redux";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -7,11 +10,29 @@ const roboto = Roboto({
   variable: "--roboto-font",
 });
 
-// If loading a variable font, you don't need to specify the font weight
 export default function App({ Component, pageProps }) {
+  function getPageWrapperComponent() {
+    if (Component.getLayout) {
+      return Component.getLayout(<Component {...pageProps} />);
+    } else {
+      return <Component {...pageProps} />;
+    }
+  }
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      refetchOnWindowFocus: false,
+      retry: false
+    }
+  });
+
   return (
-    <main className={roboto.className}>
-      <Component {...pageProps} />
-    </main>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+      
+          {getPageWrapperComponent()}
+       
+      </QueryClientProvider>
+    </Provider>
   );
 }

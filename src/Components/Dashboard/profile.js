@@ -33,13 +33,13 @@ const ProfileDropdown = () => {
                   <Avatar
                     style={{
                       background: "#ffffff",
-                      marginRight: "8px",
+                      marginRight: "4px",
                       marginLeft: "25px",
                     }}
                     src="/assets/dashboard/profile.png"
                   />
                   <span style={{ color: "#ffffff", fontSize: "14px" }}>
-                    Umesh
+                  Serati Ma
                   </span>
                 </Space>
               </a>

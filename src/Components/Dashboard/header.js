@@ -8,7 +8,7 @@ import SearchBox from "./search";
 const DashboardHeader = () => {
   return (
     <>
-      <Row className="sn-nav" align="middle">
+      <Row className="sn-nav" align={'middle'}>
         <Col
           md={{
             span: 3,
@@ -29,7 +29,7 @@ const DashboardHeader = () => {
             offset: 10,
           }}
         >
-          <Row justify="end" align="middle">
+          <Row justify="end" align={'middle'}>
             <SearchBox />
 
             <NotificationDropdown />

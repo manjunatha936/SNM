@@ -12,13 +12,20 @@
   height: 32px;
   color: #ffffff !important;
 
-  &:is(:hover, :focus) {
-    color: #ffffff !important;
-  }
+  // &:is(:hover, :focus) {
+  //   color: #ffffff !important;
+  // }
 
   &--primary {
     background: #1890ff;
     border: 1px solid #1890ff;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  }
+
+  &--secondary {
+    background: #ffffff;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
+    color: rgba(0, 0, 0, 0.85) !important;
   }
 }

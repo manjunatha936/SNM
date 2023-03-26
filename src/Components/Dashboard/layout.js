@@ -12,7 +12,10 @@ import {
 import { Layout, Menu, theme, Button } from "antd";
 import { useState, React } from "react";
 import NaviGation from "./navigation";
-
+import Connects from "@/Components/Dashboard/connects/connect";
+import ConnectedApps from "./connects/connectedapps";
+import { useDispatch, useSelector } from "react-redux";
+import { AppStepAction }  from "@/pages/store/index";
 
 
 
@@ -77,6 +80,7 @@ const items = [
 
 ];
 const DashboardLayout = () => {
+    const { Appstep } = useSelector((state) => state.Appstep);
     const [collapsed, setCollapsed] = useState(false);
     const SidebarToggle = () => {
         setCollapsed(!collapsed)
@@ -119,7 +123,14 @@ const DashboardLayout = () => {
                 <Content
 >
 
-                  
+                    <div className="sn-dashboard-conatiner">
+                        {
+                            Appstep.connectionlist ?  <ConnectedApps /> :  <Connects />
+                        }
+                    
+                    </div>
+                    
+                 
                 </Content>
                 {/* <Footer
           style={{
