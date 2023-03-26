@@ -1,14 +1,17 @@
 import { Card, Row, Col, Form, Input, Button } from "antd";
 
 import Image from "next/image";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppStepAction }  from "@/pages/store/index";
+import { useState } from "react";
 
 const MapFieldsApp = (props) => {
     const dispatch = useDispatch();
+    const { Appstep } = useSelector((state) => state.Appstep);
+    const [step, setStep] = useState(Appstep.step);
     const onFinish = (values) => {
         console.log('Success:', values);
-        dispatch(AppStepAction.handleStepData({ key: "step", value: 3 }))
+        dispatch(AppStepAction.handleStepData({ key: "step", value: step + 1 }))
       };
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);

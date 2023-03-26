@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import { Switch } from "antd";
 import { Spin } from "antd";
-import { useState, useRef} from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppStepAction }  from "@/pages/store/index";
 
@@ -18,8 +18,9 @@ const ConnectApps = (props) => {
     const [Sync, setSync] = useState(false);
     const [Synced, setSynced] = useState(false);
     const [Propval, setPropVal] = useState({})
-    const switchClick = useRef(null);
+  
     const { Appstep } = useSelector((state) => state.Appstep);
+    const [step, setStep] = useState(Appstep.step);
   const antIcon = (
     <SyncOutlined
       style={{
@@ -51,7 +52,7 @@ const ConnectApps = (props) => {
     setTimeout(() => {
        
        
-        dispatch(AppStepAction.handleStepData({ key: "step", value: 1 }))
+        dispatch(AppStepAction.handleStepData({ key: "step", value: step + 1 }))
       
       }, 2000);
 
@@ -161,18 +162,7 @@ const ConnectApps = (props) => {
 
             }
 
-           <Switch onChange={SwitchChange}  onClick={Propval.click} ref={switchClick} style={
-                Synced
-                  ? {
-                      opacity: "0",
-                     
-                    }
-                  : {
-                     
-                      opacity: "1",
-                    
-                    }
-              }/>
+           <Switch onChange={SwitchChange}/>
           
           </Col>
         </Row>
