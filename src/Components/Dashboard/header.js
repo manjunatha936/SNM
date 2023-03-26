@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { Col, Row, Badge, Avatar } from "antd";
+import { Col, Row } from "antd";
 import { React } from "react";
-import {
-  SearchOutlined,
-  QuestionCircleOutlined,
-  BellOutlined,
-} from "@ant-design/icons";
+import NotificationDropdown from "./notification";
+import ProfileDropdown from "./profile";
+import SearchBox from "./search";
 
 const DashboardHeader = () => {
   return (
@@ -32,23 +30,11 @@ const DashboardHeader = () => {
           }}
         >
           <Row justify="end" align="middle">
-            <SearchOutlined
-              style={{ color: "#ffffff", fontSize: "20px", marginLeft: "25px" }}
-            />
-            <QuestionCircleOutlined
-              style={{ color: "#ffffff", fontSize: "20px", marginLeft: "25px" }}
-            />
-            <Badge count={5} size="small">
-              <BellOutlined
-                style={{
-                  color: "#ffffff",
-                  fontSize: "20px",
-                  marginLeft: "25px",
-                }}
-              />
-            </Badge>
-            <Avatar  style={{ background: "#ffffff", marginRight: "8px", marginLeft: "25px"}} src="/assets/dashboard/profile.png" />
-            <span style={{ color: "#ffffff", fontSize: "14px"}}>Umesh</span>
+            <SearchBox />
+
+            <NotificationDropdown />
+
+            <ProfileDropdown />
           </Row>
         </Col>
       </Row>
