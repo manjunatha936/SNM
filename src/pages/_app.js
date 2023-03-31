@@ -22,16 +22,14 @@ export default function App({ Component, pageProps }) {
   const queryClient = new QueryClient({
     defaultOptions: {
       refetchOnWindowFocus: false,
-      retry: false
-    }
+      retry: false,
+    },
   });
 
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-      
-          {getPageWrapperComponent()}
-       
+        {getPageWrapperComponent()}
       </QueryClientProvider>
     </Provider>
   );
