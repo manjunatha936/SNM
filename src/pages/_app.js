@@ -16,9 +16,11 @@ export default function App({ Component, pageProps }) {
       return Component.getLayout(<Component {...pageProps} />);
     } else {
       return (
-        <main className={roboto.className}>
-          <Component {...pageProps} />
-        </main>
+        <>
+          <main className={roboto.className}>
+            <Component {...pageProps} />
+          </main>
+        </>
       );
     }
   }

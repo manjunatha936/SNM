@@ -2,6 +2,7 @@ import React from "react";
 import Login from "../Components/Login";
 import Image from "next/image";
 
+
 const LoginFlow = () => {
   return (
     <div className="sn-login-wrap">

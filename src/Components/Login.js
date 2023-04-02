@@ -1,18 +1,21 @@
 import { Tabs, Checkbox, Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const { TabPane } = Tabs;
 
 const LoginSignup = () => {
   const [activeKey, setActiveKey] = useState("login");
+  const router = useRouter();
 
   const handleTabChange = (key) => {
     setActiveKey(key);
   };
 
   const handleLoginSubmit = (values) => {
-    console.log("Login form submitted:", values);
+    // console.log("Login form submitted:", values);
+    router.push({ pathname: "/dashboard" });
   };
 
   const handleSignupSubmit = (values) => {

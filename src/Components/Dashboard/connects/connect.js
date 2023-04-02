@@ -14,7 +14,7 @@ const Connects = (props) => {
 
   return (
     <Fragment>
-      <StepsApp count={step} />
+      {Appstep.step != 3 ? <StepsApp count={step} /> : null}
       {Appstep.step == 0 ? <ConnectApps /> : ""}
 
       {Appstep.step == 1 ? <MapTabletsApp /> : ""}
