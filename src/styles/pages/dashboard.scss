@@ -50,7 +50,12 @@
 }
 
 .sn-dashboard-conatiner {
-    padding: 34px 26px 34px 34px;
+    padding: 34px 26px 100px 34px;
+}
+
+.ant-layout-content {
+    position  : relative;
+    overflow-y: auto;
 }
 
 .apps-list {
@@ -85,7 +90,7 @@
         border       : 2px solid #EAEAEA !important;
         border-radius: 2px !important;
         padding      : 25px !important;
-        margin-top: 25px;
+        margin-top   : 25px;
 
 
         &:first-child {

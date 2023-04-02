@@ -23,7 +23,7 @@
 }
 
 .snm-form {
-    margin     : 0 3.5rem;
+    margin     : 0 5rem;
     padding-top: 3rem;
 }
 
@@ -32,8 +32,10 @@
 }
 
 .sn-login-cnt {
-    width    : 500px;
+    width    : 550px;
     max-width: 100%;
+    position : relative;
+    z-index  : 10;
 
     &__des {
         margin-top: 1rem;

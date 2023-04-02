@@ -10,17 +10,16 @@ import { Switch } from "antd";
 import { Spin } from "antd";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppStepAction }  from "@/pages/store/index";
-
+import { AppStepAction } from "@/pages/store/index";
 
 const ConnectApps = (props) => {
-    const dispatch = useDispatch();
-    const [Sync, setSync] = useState(false);
-    const [Synced, setSynced] = useState(false);
-    const [Propval, setPropVal] = useState({})
-  
-    const { Appstep } = useSelector((state) => state.Appstep);
-    const [step, setStep] = useState(Appstep.step);
+  const dispatch = useDispatch();
+  const [Sync, setSync] = useState(false);
+  const [Synced, setSynced] = useState(false);
+  const [Propval, setPropVal] = useState({});
+
+  const { Appstep } = useSelector((state) => state.Appstep);
+  const [step, setStep] = useState(Appstep.step);
   const antIcon = (
     <SyncOutlined
       style={{
@@ -47,34 +46,21 @@ const ConnectApps = (props) => {
   ];
 
   const SwitchChange = (checked) => {
-    setSync(checked)
-   
-    setTimeout(() => {
-       
-       
-        dispatch(AppStepAction.handleStepData({ key: "step", value: step + 1 }))
-      
-      }, 2000);
+    setSync(checked);
 
-     
+    setTimeout(() => {
+      dispatch(AppStepAction.handleStepData({ key: "step", value: step + 1 }));
+    }, 2000);
   };
 
   return (
     <>
-
-
-   
-      
       <Card
         className="sn-dashboard-card"
         style={{
           width: 554,
         }}
         // ref={switchClick}
-       
-
-       
-        
       >
         <Row
           className="sn-dashboard-card__body"
@@ -87,7 +73,7 @@ const ConnectApps = (props) => {
               offset: 0,
             }}
           >
-            <Row align={'middle'}>
+            <Row align={"middle"}>
               <Col
                 md={{
                   span: 20,
@@ -134,21 +120,29 @@ const ConnectApps = (props) => {
               offset: 2,
             }}
           >
-            <Row align={'middle'}>
-                {
-                    Sync ? <><Spin indicator={antIcon} />
-                    <span>&nbsp;&nbsp;Initializing sync..</span></>
-                    :
-                    ''
-                }
+            <Row align={"middle"}>
+              {Sync ? (
+                <>
+                  <Spin indicator={antIcon} />
+                  <span>&nbsp;&nbsp;Initializing sync..</span>
+                </>
+              ) : (
+                ""
+              )}
 
-                {
-                    Synced ? <><CheckCircleOutlined style={{
-                        fontSize: 30,
-                        color: "#4ECB73",
-                      }}/><span>&nbsp;&nbsp;Synced</span></> : ''
-                }
-              
+              {Synced ? (
+                <>
+                  <CheckCircleOutlined
+                    style={{
+                      fontSize: 30,
+                      color: "#4ECB73",
+                    }}
+                  />
+                  <span>&nbsp;&nbsp;Synced</span>
+                </>
+              ) : (
+                ""
+              )}
             </Row>
           </Col>
           <Col
@@ -156,14 +150,10 @@ const ConnectApps = (props) => {
               span: 2,
               offset: 2,
             }}
-           
           >
-            {
+            {}
 
-            }
-
-           <Switch onChange={SwitchChange}/>
-          
+            <Switch onChange={SwitchChange} />
           </Col>
         </Row>
       </Card>

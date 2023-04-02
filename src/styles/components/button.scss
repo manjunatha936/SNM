@@ -1,16 +1,17 @@
 .sn-btn {
-  border-radius: 2px;
-  display: inline-block;
+  border-radius  : 2px;
+  display        : inline-block;
   text-decoration: none;
-  padding: 0.25rem 0.8rem;
-  font-size: 14px;
-  line-height: 22px;
-  transition: 0.3s ease-in-out;
-  border: none;
-  max-width: 100% !important;
-  cursor: pointer;
-  height: 32px;
-  color: #ffffff !important;
+  padding        : 0.25rem 0.8rem;
+  font-size      : 14px;
+  line-height    : 22px;
+  transition     : 0.3s ease-in-out;
+  border         : none;
+  max-width      : 100% !important;
+  cursor         : pointer;
+  height         : 32px;
+  color          : #ffffff !important;
+  font-family    : var(--robot-font) !important;
 
   // &:is(:hover, :focus) {
   //   color: #ffffff !important;
@@ -18,34 +19,37 @@
 
   &--primary {
     background: #1890ff;
-    border: 1px solid #1890ff;
+    border    : 1px solid #1890ff;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
   }
 
   &--secondary {
     background: #ffffff;
-    border: 1px solid #D9D9D9;
+    border    : 1px solid #D9D9D9;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
-    color: rgba(0, 0, 0, 0.85) !important;
+    color     : rgba(0, 0, 0, 0.85) !important;
   }
 }
 
 
 .sn-ar-btn {
 
-background: #BDBDBD;
-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
-border-radius: 2px;
-display: flex;
-align-items: center;
-justify-content: center;
-&:hover {
-  background: #BDBDBD !important;
-}
-&--blue {
-  background: #1890FF;
+  background     : #BDBDBD;
+  box-shadow     : 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius  : 2px;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
   &:hover {
-    background: #1890FF !important;
+    background: #BDBDBD !important;
   }
-}
+
+  &--blue {
+    background: #1890FF;
+
+    &:hover {
+      background: #1890FF !important;
+    }
+  }
 }

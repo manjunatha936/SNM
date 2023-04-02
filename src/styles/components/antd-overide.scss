@@ -1,16 +1,23 @@
 .ant-layout-sider {
-  background: #ffffff;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+:where(.css-dev-only-do-not-override-mxhywb).ant-menu-inline .ant-menu-submenu-title,
+:where(.css-dev-only-do-not-override-mxhywb).ant-menu-inline .ant-menu-item {
+    height     : 30px !important;
+    font-family: var(--robot-font) !important;
 }
 
 // Dashboard
 .sn-sidebar-menu {
     padding-top: 10px;
+
     .ant-menu-submenu {
         margin-bottom: 20px;
 
-        @media (min-width: 1400px) {
-            margin-bottom: 30x;
+        @media (min-width: 992px) {
+            margin-bottom: 18px !important;
         }
     }
 
@@ -20,7 +27,7 @@
 
     .ant-menu-title-content {
         font-size: 14px !important;
-        color: #000000 !important;
+        color    : #000000 !important;
     }
 }
 
@@ -33,30 +40,30 @@
 }
 
 .ant-steps-item-description {
-    color: rgba(0, 0, 0, 0.45) !important;
+    color      : rgba(0, 0, 0, 0.45) !important;
     font-weight: 400;
-    font-size: 14px !important;
+    font-size  : 14px !important;
 }
 
 .ant-steps-item-title {
-    color: rgba(0, 0, 0, 0.45);
+    color      : rgba(0, 0, 0, 0.45);
     font-weight: 400;
-    font-size: 16px !important;
+    font-size  : 16px !important;
 }
 
 .ant-steps-item-wait .ant-steps-item-icon {
-    background: none !important;
+    background  : none !important;
     border-color: rgba(0, 0, 0, 0.25) !important;
 }
 
 .ant-steps-item-process .ant-steps-item-icon {
     background: #1890FF !important;
-border: 1px solid #1890FF !important;
+    border    : 1px solid #1890FF !important;
 }
 
 .ant-card-body {
-    background: #FFFFFF;
-    border: 2px solid #EAEAEA !important;
+    background   : #FFFFFF;
+    border       : 2px solid #EAEAEA !important;
     border-radius: 2px !important;
 }
 
@@ -71,17 +78,18 @@ border: 1px solid #1890FF !important;
 
     &__footer {
         border-top: 2px solid #EAEAEA;
-        padding: 20px 26px;
+        padding   : 20px 26px;
     }
 
     &--padding {
-        padding: 24px 30px;
+        padding      : 24px 30px;
         border-radius: 2px !important;
 
         .ant-card-body {
-            border:  0 !important;
+            border: 0 !important;
         }
     }
+
     input {
         border-radius: 2px !important;
     }
@@ -97,4 +105,10 @@ border: 1px solid #1890FF !important;
 
 .ant-switch.ant-switch-checked {
     background: #1890FF !important;
+}
+
+// Steps
+
+.ant-steps-horizontal {
+    max-width: 75% !important;
 }
